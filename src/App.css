@@ -58,3 +58,13 @@ html, body, #root {
 .read-the-docs {
   color: #888;
 }
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.light-mode {
+  background-color: #fff;
+  color: #000;
+}

@@ -14,15 +14,17 @@ function LatestAlbum() {
   const navigate = useNavigate();
 
   const handleClick = (id) => {
-    navigate(`/album/${id}`);
+    navigate(`/album/${id}`); // 문자열 템플릿 수정
   };
 
   return (
-    <div style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(3, 1fr)',
-      gap: '24px'
-    }}>
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, 1fr)',
+        gap: '24px'
+      }}
+    >
       {albums.map(album => (
         <div
           key={album.id}
@@ -34,8 +36,9 @@ function LatestAlbum() {
             border: '1px solid #ddd',
             borderRadius: '8px',
             padding: '30px',
-            backgroundColor: '#fafafa',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            backgroundColor: '#fff', // 밝은 배경색 고정
+            color: '#000' // 텍스트 색 고정
           }}
         >
           <img

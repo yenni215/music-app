@@ -9,18 +9,37 @@ import LatestMusic from './pages/LatestMusic';
 import GenreMusic from './pages/GenreMusic';
 import Playlist from './pages/Playlist';
 import AlbumDetail from './components/AlbumDetail';
-import SongDetail from './pages/SongDetail'; // 곡 상세 페이지 추가
+import SongDetail from './pages/SongDetail';
 
 function App() {
   return (
-    <div style={{ backgroundColor: '#fff' }}>
+    <div
+      style={{
+        backgroundColor: '#fff',
+        color: '#000',
+        minHeight: '100vh',
+      }}
+    >
       {/* 헤더 영역 */}
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
+      <div
+        style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 24px',
+        }}
+      >
         <Header />
       </div>
 
       {/* 페이지 콘텐츠 영역 */}
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
+      <div
+        style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 24px',
+          minHeight: 'calc(100vh - 100px)',
+        }}
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -30,7 +49,7 @@ function App() {
           <Route path="/genre" element={<GenreMusic />} />
           <Route path="/playlist" element={<Playlist />} />
           <Route path="/album/:id" element={<AlbumDetail />} />
-          <Route path="/songs/:id" element={<SongDetail />} />
+          <Route path="/song/:id" element={<SongDetail />} />
         </Routes>
       </div>
     </div>

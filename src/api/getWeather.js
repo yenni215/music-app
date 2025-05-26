@@ -1,7 +1,7 @@
 // src/api/getWeather.js
 const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
-export async function fetchWeather(city = 'Seoul') {
+export async function fetchWeather(city = 'Incheon') {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=kr`;
 
   try {

@@ -58,7 +58,7 @@ function SongDetail() {
   };
 
   return (
-    <div style={{ paddingTop: '120px', paddingLeft: '20px' }}>
+    <div style={{ paddingTop: '180px', paddingLeft: '20px' }}>
       <h2>{song.title}</h2>
       <p><strong>아티스트:</strong> {song.artist}</p>
       <p><strong>앨범:</strong> {song.album}</p>
