@@ -1,3 +1,16 @@
+/* App.css */
+
+/* 전체 화면 높이, margin/padding 초기화, 스크롤 허용 */
+html, body, #root {
+  height: auto;              /* 🔧 수정: 고정된 100% 높이 대신 auto로 설정 */
+  min-height: 100vh;         /* ✅ 최소 높이를 화면 전체로 보장 */
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;          /* ✅ 세로 스크롤 가능하게 유지 */
+  box-sizing: border-box;
+}
+
+/* 메인 컨테이너 정렬 및 여백 설정 */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,6 +18,7 @@
   text-align: center;
 }
 
+/* 로고 관련 스타일 유지 */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -18,6 +32,7 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* 로고 회전 애니메이션 */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -27,16 +42,19 @@
   }
 }
 
+/* 모션이 허용될 때만 애니메이션 적용 */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
+/* 카드 컴포넌트 기본 패딩 */
 .card {
   padding: 2em;
 }
 
+/* 문서 하단 정보 색상 */
 .read-the-docs {
   color: #888;
 }
