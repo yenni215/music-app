@@ -1,9 +1,19 @@
 let commentsStore = {}; // 메모리 저장용 (배포 시 DB 필요)
-const allowedOrigin = 'https://music-app-two-dun.vercel.app'; 
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://music-app-two-dun.vercel.app', // 당신의 프론트 배포 주소
+];
 
 export default async function handler(req, res) {
-  // CORS 헤더 수동 설정
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  const origin = req.headers.origin;
+  console.log('origin:', origin); // 디버깅용
+
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  } else {
+    res.setHeader('Access-Control-Allow-Origin', 'null');
+  }
+
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
