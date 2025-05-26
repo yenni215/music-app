@@ -2,6 +2,8 @@ let commentsStore = {}; // 메모리 저장용 (배포 시 DB 필요)
 const allowedOrigins = [
   'http://localhost:5173',
   'https://music-app-two-dun.vercel.app', // 당신의 프론트 배포 주소
+  'https://music-app-git-main-yennis-projects-81408583.vercel.app/',
+  
 ];
 
 export default async function handler(req, res) {
