@@ -1,4 +1,5 @@
 let commentsStore = {}; // 메모리 저장용 (배포 시 DB 필요)
+const allowedOrigin = 'https://music-app-two-dun.vercel.app'; 
 
 export default async function handler(req, res) {
   // CORS 헤더 수동 설정
