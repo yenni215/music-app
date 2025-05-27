@@ -49,7 +49,7 @@ function LatestAlbum() {
               height: '180px',
               objectFit: 'cover',
               borderRadius: '12px',
-              marginBottom: '12px'
+              marginBottom: '32px'
             }}
           />
           <p style={{ fontSize: '15px', fontWeight: '500' }}>{album.title}</p>

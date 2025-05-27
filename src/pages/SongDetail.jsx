@@ -33,10 +33,10 @@ function SongDetail() {
     if (newComment.trim() === '') return;
 
     // 댓글 등록(POST 요청)
-    fetch('https://music-jc6hyendx-yennis-projects-81408583.vercel.app/api/comments', {
+    fetch('/api/comments', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ songId: id, user, comment: newComment.trim() }),
+      body: JSON.stringify({ id, user, comment: newComment.trim() }),
     })
         
       .then((res) => {
