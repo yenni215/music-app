@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import songsData from '../data/songsData';
 
@@ -6,52 +6,9 @@ function SongDetail() {
   const { id } = useParams();
   const song = songsData.find((s) => s.id.toString() === id);
 
-  const [comments, setComments] = useState([]);
-  const [newComment, setNewComment] = useState('');
-  const [loadingComments, setLoadingComments] = useState(true);
-
-  useEffect(() => {
-    fetch(`/api/comments?songId=${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setComments(data);
-        setLoadingComments(false);
-      })
-      .catch(() => setLoadingComments(false));
-  }, [id]);
-
   if (!song) {
     return <div style={{ paddingTop: '120px' }}>곡 정보를 찾을 수 없습니다.</div>;
   }
-
-  const handleAddComment = () => {
-    const user = '익명'; 
-
-    if (newComment.trim() === '') return;
-
-    fetch('/api/comments', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id, user, comment: newComment.trim() }),
-    })
-        
-      .then((res) => {
-        if (!res.ok) throw new Error('댓글 등록 실패');
-        console.log(songId, user,newComment.trim());
-        return res.json();
-      })
-      .then(() => {
-        
-        setComments((prev) => [
-          ...prev,
-          { user, comment: newComment.trim(), date: new Date().toISOString() },
-        ]);
-        setNewComment('');
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
-  };
 
   return (
     <div style={{ paddingTop: '180px', paddingLeft: '20px' }}>
@@ -62,35 +19,6 @@ function SongDetail() {
       <p><strong>장르:</strong> {song.genre}</p>
       <p><strong>가사:</strong></p>
       <pre style={{ whiteSpace: 'pre-wrap' }}>{song.lyrics}</pre>
-      {/* <hr /> */}
-      {/* <h3>댓글</h3>
-
-      {loadingComments ? (
-        <p>댓글을 불러오는 중...</p>
-      ) : comments.length > 0 ? (
-        <ul>
-          {comments.map((c, idx) => (
-            <li key={idx}>
-              <strong>{c.user}:</strong> {c.comment} <small>({new Date(c.date).toLocaleString()})</small>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>댓글이 없습니다.</p>
-      )}
-
-      <div style={{ marginTop: '20px' }}>
-        <textarea
-          value={newComment}
-          onChange={(e) => setNewComment(e.target.value)}
-          placeholder="댓글을 입력하세요"
-          rows={3}
-          style={{ width: '100%', resize: 'vertical' }}
-        />
-        <button onClick={handleAddComment} style={{ marginTop: '8px' }}>
-          등록
-        </button>
-      </div> */}
     </div>
   );
 }
