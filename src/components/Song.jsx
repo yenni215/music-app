@@ -6,6 +6,7 @@ const Song = ({ song }) => {
   return (
     <div style={{ textAlign: 'left' }}>
       <h3>{song.title}</h3>
+      <h2>곡 상세 정보</h2>
       <p>아티스트: {song.artist}</p>
       <p>앨범: {song.album}</p>
       <p>발매일: {song.releaseDate}</p>

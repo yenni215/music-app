@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import songsData from '../data/songsData';
-import Song from '../components/Song'; // ✅ Song 컴포넌트 import
+import Song from '../components/Song'; 
 
 function SongDetail() {
   const { id } = useParams();
@@ -13,7 +13,7 @@ function SongDetail() {
 
   return (
     <div style={{ paddingTop: '180px', paddingLeft: '20px' }}>
-      <Song song={song} /> {/* ✅ Song 컴포넌트로 렌더링 */}
+      <Song song={song} /> 
     </div>
   );
 }
