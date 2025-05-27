@@ -10,6 +10,7 @@ import GenreMusic from './pages/GenreMusic';
 import Playlist from './pages/Playlist';
 import AlbumDetail from './components/AlbumDetail';
 import SongDetail from './pages/SongDetail';
+import SearchResults from './pages/SearchResults';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
       >
         <Header />
       </div>
-      
+
       <div
         style={{
           maxWidth: '1200px',
@@ -48,6 +49,7 @@ function App() {
           <Route path="/playlist" element={<Playlist />} />
           <Route path="/album/:id" element={<AlbumDetail />} />
           <Route path="/song/:id" element={<SongDetail />} />
+          <Route path="/search" element={<SearchResults />} />
         </Routes>
       </div>
     </div>

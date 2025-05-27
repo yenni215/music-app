@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import songsData from '../data/songsData';
 import './Header.css';
 
 function Header() {
@@ -12,21 +11,7 @@ function Header() {
       alert('검색어를 입력해주세요.');
       return;
     }
-    const matchedSongs = songsData.filter(song => {
-      const q = query.toLowerCase();
-      return (
-        song.title.toLowerCase().includes(q) ||
-        song.artist.toLowerCase().includes(q) ||
-        (song.album && song.album.toLowerCase().includes(q))
-      );
-    });
-
-    if (matchedSongs.length === 0) {
-      alert('검색 결과가 없습니다.');
-      return;
-    }
-
-    navigate(`/song/${matchedSongs[0].id}`);
+    navigate(`/search?query=${encodeURIComponent(query)}`);
     setQuery('');
   };
 
