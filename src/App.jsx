@@ -10,7 +10,7 @@ import GenreMusic from './pages/GenreMusic';
 import Playlist from './pages/Playlist';
 import AlbumDetail from './components/AlbumDetail';
 import SongDetail from './pages/SongDetail';
-import SearchResults from './pages/SearchResults';
+import SearchResults from './components/SearchResults';
 
 function App() {
   return (
