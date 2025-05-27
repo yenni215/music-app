@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import songsData from '../data/songsData';
+import Song from '../components/Song'; // ✅ Song 컴포넌트 import
 
 function SongDetail() {
   const { id } = useParams();
@@ -12,13 +13,7 @@ function SongDetail() {
 
   return (
     <div style={{ paddingTop: '180px', paddingLeft: '20px' }}>
-      <h2>{song.title}</h2>
-      <p><strong>아티스트:</strong> {song.artist}</p>
-      <p><strong>앨범:</strong> {song.album}</p>
-      <p><strong>발매일:</strong> {song.releaseDate}</p>
-      <p><strong>장르:</strong> {song.genre}</p>
-      <p><strong>가사:</strong></p>
-      <pre style={{ whiteSpace: 'pre-wrap' }}>{song.lyrics}</pre>
+      <Song song={song} /> {/* ✅ Song 컴포넌트로 렌더링 */}
     </div>
   );
 }

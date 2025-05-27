@@ -13,7 +13,7 @@ const Song = ({ song }) => {
         .then(res => res.json())
         .then(data => {
           if (data && typeof data.viewCount === 'number') {
-            setViewCount(data.viewCount);
+            setViewCount(data.views);
           }
         });
     }
