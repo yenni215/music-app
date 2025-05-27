@@ -16,7 +16,7 @@ const SearchResults = () => {
 
   return (
     <div style={{ padding: '100px 40px' }}>
-      <h2>🔍 검색 결과: "{query}"</h2>
+      <h2>검색 결과: "{query}"</h2>
       {matchedSongs.length === 0 ? (
         <p>검색 결과가 없습니다.</p>
       ) : (

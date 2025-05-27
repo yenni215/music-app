@@ -219,7 +219,26 @@ const songsData = [
     lyrics: "몸은 구겨져도 마음은 부풀어서...",
     comments: [],
   },
-
+  {
+    id: 23,
+    title: "그라데이션",
+    artist: "10CM",
+    album: "5.3",
+    releaseDate: "2022-07-03",
+    genre: "인디음악, 포크/블루스",
+    lyrics: "밤은 다시 길고 깊어졌네",
+    comments: [],
+  },
+  {
+    id: 24,
+    title: "봄눈",
+    artist: "10CM",
+    album: "선재 업고 튀어 OST Part 8",
+    releaseDate: "2024-05-14",
+    genre: "발라드, 국내드라마",
+    lyrics: "가려진 오랜 시간이 우리를...",
+    comments: [],
+  }
 ];
 
 export default songsData;
