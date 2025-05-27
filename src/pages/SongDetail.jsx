@@ -62,7 +62,7 @@ function SongDetail() {
       <p><strong>장르:</strong> {song.genre}</p>
       <p><strong>가사:</strong></p>
       <pre style={{ whiteSpace: 'pre-wrap' }}>{song.lyrics}</pre>
-      <hr />
+      {/* <hr /> */}
       {/* <h3>댓글</h3>
 
       {loadingComments ? (
