@@ -5,11 +5,11 @@ const Song = ({ song }) => {
 
   useEffect(() => {
     if (song && song.id) {
-      fetch('/api/view-count', {
+      fetch('http://localhost:3001/api/view-count', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ songId: song.id }),
-      })
+        })
         .then(res => res.json())
         .then(data => {
           if (data && typeof data.views === 'number') {
