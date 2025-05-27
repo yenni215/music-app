@@ -11,12 +11,10 @@ function SongDetail() {
   const [loadingComments, setLoadingComments] = useState(true);
 
   useEffect(() => {
-    // 댓글 불러오기(GET 요청)
+    
     fetch(`/api/comments?songId=${id}`)
       .then((res) => res.json())
       .then((data) => {
-        // API 응답 형식에 맞게 comments 배열 상태 업데이트
-        // data가 [{user, comment, date}, ...] 배열이라고 가정
         setComments(data);
         setLoadingComments(false);
       })
@@ -28,11 +26,10 @@ function SongDetail() {
   }
 
   const handleAddComment = () => {
-    const user = '익명'; // 임시로 사용자명 하드코딩, 로그인 시스템 있다면 교체
+    const user = '익명'; 
 
     if (newComment.trim() === '') return;
 
-    // 댓글 등록(POST 요청)
     fetch('/api/comments', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -45,7 +42,7 @@ function SongDetail() {
         return res.json();
       })
       .then(() => {
-        // 댓글 성공적으로 저장되면, 댓글 리스트에 새 댓글 추가
+        
         setComments((prev) => [
           ...prev,
           { user, comment: newComment.trim(), date: new Date().toISOString() },

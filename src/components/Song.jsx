@@ -32,7 +32,6 @@ const Song = ({ song }) => {
         <strong>장르:</strong> {song.genre}
       </p>
 
-      {/* 가사 */}
       <div style={{ marginTop: '12px' }}>
         <strong>가사:</strong>{' '}
         {lyricsOpen ? (

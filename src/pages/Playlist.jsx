@@ -1,4 +1,3 @@
-// src/components/Playlist.jsx
 import React, { useState } from 'react';
 import songsData from '../data/songsData';
 
@@ -15,7 +14,6 @@ function Playlist() {
     ? songsData.filter(song => playlists[selectedPlaylist].includes(song.id))
     : [];
 
-  // 재생 버튼 클릭 시 알림
   const handlePlay = () => {
     alert('재생 기능은 저작권 문제로 구현하지 못했습니다.');
   };

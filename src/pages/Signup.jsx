@@ -1,3 +1,4 @@
+// Signup.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -5,18 +6,15 @@ function Signup() {
   const navigate = useNavigate();
   const [form, setForm] = useState({ username: '', password: '', confirm: '' });
 
-  // 입력값 변경 처리
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // 회원가입 버튼 클릭 시
   const handleSignup = (e) => {
     e.preventDefault();
 
     const { username, password, confirm } = form;
 
-    // 중복 아이디 체크
     const users = JSON.parse(localStorage.getItem('users')) || [];
     const isDuplicate = users.some((user) => user.username === username);
     if (isDuplicate) {
@@ -24,18 +22,16 @@ function Signup() {
       return;
     }
 
-    // 비밀번호 확인
     if (password !== confirm) {
       alert('비밀번호가 일치하지 않습니다.');
       return;
     }
 
-    // 회원 정보 localStorage에 저장
     const newUser = { username, password };
     localStorage.setItem('users', JSON.stringify([...users, newUser]));
 
     alert('회원가입 완료!');
-    navigate('/login'); // 로그인 페이지로 이동
+    navigate('/');
   };
 
   return (

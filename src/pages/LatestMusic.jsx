@@ -7,15 +7,14 @@ function LatestMusic() {
     (a, b) => new Date(b.releaseDate) - new Date(a.releaseDate)
   );
 
-  // 다크모드 관련 제거, 라이트모드 고정 색상 적용
   const containerStyle = {
     paddingTop: '100px',
     maxWidth: '1400px',
     margin: '0 auto',
     paddingLeft: '25px',
     paddingRight: '10px',
-    color: '#000', // 검정색 텍스트
-    backgroundColor: '#fff', // 흰색 배경
+    color: '#000', 
+    backgroundColor: '#fff', 
   };
 
   const headerStyle = {

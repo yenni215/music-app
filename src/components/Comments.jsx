@@ -5,7 +5,6 @@ function Comments({ songId }) {
   const [user, setUser] = useState('');
   const [comment, setComment] = useState('');
 
-  // 댓글 불러오기
   useEffect(() => {
     async function fetchComments() {
       const res = await fetch(`/api/comments?songId=${songId}`);
@@ -15,7 +14,6 @@ function Comments({ songId }) {
     fetchComments();
   }, [songId]);
 
-  // 댓글 등록
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!user.trim() || !comment.trim()) return alert('사용자명과 댓글을 입력하세요.');
@@ -29,9 +27,9 @@ function Comments({ songId }) {
     if (res.ok) {
       setUser('');
       setComment('');
-      // 댓글 새로 불러오기
+      
       const updated = await res.json();
-      // 간단히 댓글 다시 가져오기
+      
       const res2 = await fetch(`/api/comments?songId=${songId}`);
       const data = await res2.json();
       setComments(data);

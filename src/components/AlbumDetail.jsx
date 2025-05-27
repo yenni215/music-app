@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-// 앨범 데이터
 const albumData = [
   {
     id: 1,
@@ -76,29 +75,24 @@ function AlbumDetail() {
     return <div>앨범 정보를 찾을 수 없습니다.</div>;
   }
 
-  // ✅ 수록곡 수에 따라 위쪽 여백 조정
-  const topMargin = album.tracks.length < 5 ? '-60px' : '140px';
-
   return (
     <div
       style={{
-        padding: '24px',
+        padding: '34px',
         boxSizing: 'border-box',
         textAlign: 'left',
-        marginTop: topMargin, // 앨범마다 위쪽 여백 조절
+        marginTop: '140px',
       }}
     >
-      {/* 상단: 이미지 + 정보 */}
       <div
         style={{
           display: 'flex',
           gap: '32px',
-          alignItems: 'flex-start', // 이미지와 정보 상단 정렬
+          alignItems: 'flex-start',
           marginBottom: '32px',
-          flexWrap: 'wrap', // 작은 화면에서도 반응형
+          flexWrap: 'wrap',
         }}
       >
-        {/* 앨범 이미지 */}
         <img
           src={album.image}
           alt={album.title}
@@ -112,7 +106,6 @@ function AlbumDetail() {
           }}
         />
 
-        {/* 앨범 정보 */}
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <h2 style={{ fontSize: '34px', marginBottom: '20px' }}>{album.title}</h2>
           <p><strong>아티스트:</strong> {album.artist}</p>
@@ -122,7 +115,6 @@ function AlbumDetail() {
         </div>
       </div>
 
-      {/* 하단: 수록곡 */}
       <div>
         <h3 style={{ marginBottom: '12px' }}>수록곡</h3>
         <ul style={{ paddingLeft: '20px' }}>

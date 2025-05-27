@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const dummyUsers = [
   { id: 'yeeun', pw: '1111' },
@@ -9,6 +10,7 @@ const dummyUsers = [
 ];
 
 const Login = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loggedInUser, setLoggedInUser] = useState(null);
@@ -21,13 +23,26 @@ const Login = () => {
   }, []);
 
   const handleLogin = () => {
-    const match = dummyUsers.find(
-      user => user.id === username.trim() && user.pw === password.trim()
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    const matchDummy = dummyUsers.find(
+      (user) => user.id === username.trim() && user.pw === password.trim()
     );
 
-    if (match) {
-      setLoggedInUser(match.id);
-      localStorage.setItem('loggedInUser', match.id);
+    const matchStored = users.find(
+      (user) => user.username === username.trim() && user.password === password.trim()
+    );
+
+    if (matchDummy) {
+      setLoggedInUser(matchDummy.id);
+      localStorage.setItem('loggedInUser', matchDummy.id);
+      alert('로그인 성공!');
+      navigate('/');
+    } else if (matchStored) {
+      setLoggedInUser(matchStored.username);
+      localStorage.setItem('loggedInUser', matchStored.username);
+      alert('로그인 성공!');
+      navigate('/');
     } else {
       alert('아이디 또는 비밀번호가 올바르지 않습니다.');
     }
@@ -123,7 +138,7 @@ const Login = () => {
 
       <div style={{ textAlign: 'center' }}>
         <button
-          onClick={() => (window.location.href = '/signup')}
+          onClick={() => navigate('/signup')}
           style={linkButtonStyle}
         >
           회원가입

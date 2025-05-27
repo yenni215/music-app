@@ -14,7 +14,7 @@ function LatestAlbum() {
   const navigate = useNavigate();
 
   const handleClick = (id) => {
-    navigate(`/album/${id}`); // 문자열 템플릿 수정
+    navigate(`/album/${id}`);
   };
 
   return (
@@ -37,8 +37,8 @@ function LatestAlbum() {
             borderRadius: '8px',
             padding: '30px',
             cursor: 'pointer',
-            backgroundColor: '#fff', // 밝은 배경색 고정
-            color: '#000' // 텍스트 색 고정
+            backgroundColor: '#fff', 
+            color: '#000' 
           }}
         >
           <img

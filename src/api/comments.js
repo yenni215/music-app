@@ -1,6 +1,4 @@
-// src/api/comments.js
-
-let commentsStore = {}; // 메모리 저장용 (배포시 DB 필요)
+let commentsStore = {}; 
 const allowedOrigins = [
   'http://localhost:5173',
   'https://music-app-two-dun.vercel.app',
@@ -19,7 +17,7 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
   if (req.method === 'OPTIONS') {
-    // preflight 요청에 대한 응답
+    
     return res.status(204).end();
   }
 

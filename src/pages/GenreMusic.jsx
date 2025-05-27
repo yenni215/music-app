@@ -1,10 +1,9 @@
-// src/pages/GenreMusic.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import songsData from '../data/songsData';
 
 function GenreMusic() {
-  // 장르별로 곡 분류 (장르가 여러 개인 경우도 처리)
+ 
   const songsByGenre = songsData.reduce((acc, song) => {
     const genres = song.genre.split(',').map(g => g.trim());
     genres.forEach((genre) => {
@@ -36,7 +35,6 @@ function GenreMusic() {
                   padding: '4px 0',
                 }}
               >
-                {/* 곡 제목 링크 */}
                 <Link
                   to={`/song/${song.id}`}
                   style={{ textDecoration: 'none', color: 'black', flex: 1 }}
@@ -44,7 +42,6 @@ function GenreMusic() {
                   <strong>{song.title}</strong> – {song.artist}
                 </Link>
 
-                {/* 재생 버튼 */}
                 <button
                   onClick={() =>
                     alert('재생 기능은 저작권 문제로 구현하지 못했습니다.')

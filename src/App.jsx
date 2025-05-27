@@ -20,7 +20,6 @@ function App() {
         minHeight: '100vh',
       }}
     >
-      {/* 헤더 영역 */}
       <div
         style={{
           maxWidth: '1200px',
@@ -30,8 +29,7 @@ function App() {
       >
         <Header />
       </div>
-
-      {/* 페이지 콘텐츠 영역 */}
+      
       <div
         style={{
           maxWidth: '1200px',

@@ -3,7 +3,7 @@ import Login from './Login';
 import Signup from './Signup';
 
 const LoginContainer = () => {
-  const [mode, setMode] = useState('login'); // 'login' 또는 'signup'
+  const [mode, setMode] = useState('login'); 
 
   return (
     <div>

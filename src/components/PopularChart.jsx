@@ -2,7 +2,6 @@ import React from 'react';
 import songsData from '../data/songsData';
 
 function PopularChart() {
-  // id 10, 12, 13번 곡만 선별
   const popularSongs = songsData.filter(song =>
     [10, 12, 13].includes(song.id)
   );
