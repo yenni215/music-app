@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Song = ({ song }) => {
   const [lyricsOpen, setLyricsOpen] = useState(false);
+  const [viewCount, setViewCount] = useState(null);
 
   useEffect(() => {
     if (song && song.id) {
@@ -9,7 +10,13 @@ const Song = ({ song }) => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ songId: song.id }),
-      });
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data && typeof data.viewCount === 'number') {
+            setViewCount(data.viewCount);
+          }
+        });
     }
   }, [song]);
 
@@ -38,6 +45,9 @@ const Song = ({ song }) => {
       </p>
       <p style={{ margin: '4px 0' }}>
         <strong>장르:</strong> {song.genre}
+      </p>
+      <p style={{ margin: '4px 0' }}>
+        <strong>조회수:</strong> {viewCount !== null ? viewCount : '로딩 중...'}
       </p>
 
       <div style={{ marginTop: '12px' }}>
