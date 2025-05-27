@@ -11,7 +11,6 @@ function SongDetail() {
   const [loadingComments, setLoadingComments] = useState(true);
 
   useEffect(() => {
-    
     fetch(`/api/comments?songId=${id}`)
       .then((res) => res.json())
       .then((data) => {
@@ -64,7 +63,7 @@ function SongDetail() {
       <p><strong>가사:</strong></p>
       <pre style={{ whiteSpace: 'pre-wrap' }}>{song.lyrics}</pre>
       <hr />
-      <h3>댓글</h3>
+      {/* <h3>댓글</h3>
 
       {loadingComments ? (
         <p>댓글을 불러오는 중...</p>
@@ -91,7 +90,7 @@ function SongDetail() {
         <button onClick={handleAddComment} style={{ marginTop: '8px' }}>
           등록
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
