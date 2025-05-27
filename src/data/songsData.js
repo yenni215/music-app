@@ -7,7 +7,6 @@ const songsData = [
     releaseDate: "2025-05-26",
     genre: "R&B/Soul",
     lyrics: "오늘의 날씨는 참...",
-    comments: [],
   },
   {
     id: 2,
@@ -17,7 +16,6 @@ const songsData = [
     releaseDate: "2025-05-26",
     genre: "R&B/Soul",
     lyrics: "톡 까놓고 말해 보자...",
-    comments: [],
   },
   {
     id: 3,
@@ -27,7 +25,6 @@ const songsData = [
     releaseDate: "2025-05-26",
     genre: "발라드",
     lyrics: "그날 따라 바람이 차가워...",
-    comments: [],
   },
   {
     id: 4,
@@ -37,7 +34,6 @@ const songsData = [
     releaseDate: "2025-05-25",
     genre: "발라드",
     lyrics: "어딜 가면 볼 수 있는지...",
-    comments: [],
   },
   {
     id: 5,
@@ -47,7 +43,6 @@ const songsData = [
     releaseDate: "2025-05-25",
     genre: "인디음악, 록/메탈",
     lyrics: "언제쯤 너는 잠에 들까...",
-    comments: [],
   },
   {
     id: 6,
@@ -57,7 +52,6 @@ const songsData = [
     releaseDate: "2025-05-25",
     genre: "록/메탈",
     lyrics: "얼마나 좋을까 그대라는...",
-    comments: [],
   },
   {
     id: 7,
@@ -67,7 +61,6 @@ const songsData = [
     releaseDate: "2025-05-25",
     genre: "댄스",
     lyrics: "Call me post, artist...",
-    comments: [],
   },
   {
     id: 8,
@@ -77,7 +70,6 @@ const songsData = [
     releaseDate: "2023-05-15",
     genre: "발라드",
     lyrics: "헤어지자 말해요...",
-    comment: [],
   },
   {
     id: 9,
@@ -87,7 +79,6 @@ const songsData = [
     releaseDate: "2023-08-21",
     genre: "댄스",
     lyrics: "사랑해요 Love Lee...",
-    comments: [],
   },
   {
     id: 10,
@@ -97,7 +88,6 @@ const songsData = [
     releaseDate: "2025-03-06",
     genre: "록/메탈",
     lyrics: "따사로운 햇살 속에서...",
-    comments: [],
   },
   {
     id: 11,
@@ -107,7 +97,6 @@ const songsData = [
     releaseDate: "2025-05-26",
     genre: "댄스",
     lyrics: "떨어져 flash 온몸이 crash...",
-    comments: [],
   },
   {
     id: 12,
@@ -117,7 +106,6 @@ const songsData = [
     releaseDate: "2023-04-26",
     genre: "록/메탈",
     lyrics: "미치도록 사랑했던...",
-    comments: [],
   },
   {
     id: 13,
@@ -127,7 +115,6 @@ const songsData = [
     releaseDate: "2025-03-07",
     genre: "댄스",
     lyrics: "Come on, it’s gon be f*** hard...",
-    comments: [],
   },
   {
     id: 14,
@@ -137,7 +124,6 @@ const songsData = [
     releaseDate: "2025-01-07",
     genre: "발라드",
     lyrics: "찬바람 불어오니...",
-    comments: [],
   },
   {
     id: 15,
@@ -147,7 +133,6 @@ const songsData = [
     releaseDate: "2025-05-25",
     genre: "R&B/Soul",
     lyrics: "It could be my fault...",
-    comments: [],
   },
   {
     id: 16,
@@ -157,7 +142,6 @@ const songsData = [
     releaseDate: "2025-05-25",
     genre: "R&B/Soul",
     lyrics: "너와 첫 만남의 그 떨림 너의...",
-    comments: [],
   },
   {
     id: 17,
@@ -167,7 +151,6 @@ const songsData = [
     releaseDate: "2025-02-25",
     genre: "랩/힙합",
     lyrics: "‘G’, ‘A.P’ “Let me kill ’em like...",
-    comments: [],
   },
   {
     id: 18,
@@ -177,7 +160,6 @@ const songsData = [
     releaseDate: "2024-10-21",
     genre: "댄스",
     lyrics: "One look give ‘em Whiplash...",
-    comments: [],
   },
   {
     id: 19,
@@ -187,7 +169,6 @@ const songsData = [
     releaseDate: "2024-10-21",
     genre: "발라드",
     lyrics: "나는 내가 빛나는 별인 줄 알았어요...",
-    comments: [],
   },
   {
     id: 20,
@@ -197,7 +178,6 @@ const songsData = [
     releaseDate: "2024-11-22",
     genre: "랩/힙합",
     lyrics: "You say, It’s changed...",
-    comments: [],
   },
   {
     id: 21,
@@ -207,7 +187,6 @@ const songsData = [
     releaseDate: "2025-03-31",
     genre: "발라드",
     lyrics: "밤새도록 내리던 소낙비가 네 모습을 지울까...",
-    comments: [],
   },
   {
     id: 22,
@@ -217,7 +196,6 @@ const songsData = [
     releaseDate: "2025-05-25",
     genre: "인디음악, 록/메탈",
     lyrics: "몸은 구겨져도 마음은 부풀어서...",
-    comments: [],
   },
   {
     id: 23,
@@ -227,7 +205,6 @@ const songsData = [
     releaseDate: "2022-07-03",
     genre: "인디음악, 포크/블루스",
     lyrics: "밤은 다시 길고 깊어졌네",
-    comments: [],
   },
   {
     id: 24,
@@ -237,7 +214,6 @@ const songsData = [
     releaseDate: "2024-05-14",
     genre: "발라드, 국내드라마",
     lyrics: "가려진 오랜 시간이 우리를...",
-    comments: [],
   }
 ];
 
