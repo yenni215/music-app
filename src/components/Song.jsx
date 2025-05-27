@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Song = ({ song }) => {
-  if (!song) return null;
-
-  // 가사 펼침 상태 관리
   const [lyricsOpen, setLyricsOpen] = useState(false);
+
+  useEffect(() => {
+    if (song && song.id) {
+      fetch('/api/view-count', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ songId: song.id }),
+      });
+    }
+  }, [song]);
+
+  if (!song) return null;
 
   return (
     <div
@@ -17,7 +26,6 @@ const Song = ({ song }) => {
         textAlign: 'left',
       }}
     >
-      {/* 곡 기본 정보 */}
       <h3 style={{ margin: '0 0 8px 0' }}>{song.title}</h3>
       <p style={{ margin: '4px 0' }}>
         <strong>아티스트:</strong> {song.artist}
@@ -70,7 +78,6 @@ const Song = ({ song }) => {
         )}
       </div>
 
-      {/* 댓글 */}
       <div style={{ marginTop: '16px' }}>
         <strong>댓글:</strong>
         {song.comments && song.comments.length > 0 ? (
