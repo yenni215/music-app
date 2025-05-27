@@ -2,12 +2,12 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const albums = [
-  { id: 1, title: 'Poet | Artist', image: '/images/Poet | Artist.jpg' },
-  { id: 2, title: 'CORPUS 0', image: '/images/CORPUS 0.jpg' },
-  { id: 3, title: 'fault', image: '/images/fault.jpg' },
-  { id: 4, title: '우리 둘의 바다', image: '/images/우리 둘의 바다.jpg' },
-  { id: 5, title: 'Blue Rain', image: '/images/Blue Rain.jpg' },
-  { id: 6, title: 'Right Away', image: '/images/Right Away.jpg' }
+  { id: 1, title: 'Poet | Artist', image: './public/images/Poet | Artist.jpg' },
+  { id: 2, title: 'CORPUS 0', image: './public/images/CORPUS 0.jpg' },
+  { id: 3, title: 'fault', image: './public/images/fault.jpg' },
+  { id: 4, title: '우리 둘의 바다', image: './public/images/oueSea.jpg' },
+  { id: 5, title: 'Blue Rain', image: './public/images/Blue Rain.jpg' },
+  { id: 6, title: 'Right Away', image: './public/images/Right Away.jpg' }
 ];
 
 function LatestAlbum() {
