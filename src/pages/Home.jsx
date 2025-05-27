@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import LatestAlbum from "../components/LatestAlbum";
 import PopularChart from "../components/PopularChart";
 import Login from "../components/Login";
-import { fetchWeather } from "../api/getWeather";
+import { fetchWeather } from "../../api/getWeather";
 import { Link, useNavigate } from "react-router-dom";
 import songsData from "../data/songsData";
 
