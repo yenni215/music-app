@@ -1,5 +1,3 @@
-// src/data/songsData.js
-
 const songsData = [
   {
     id: 1,
@@ -210,7 +208,17 @@ const songsData = [
     genre: "발라드",
     lyrics: "밤새도록 내리던 소낙비가 네 모습을 지울까...",
     comments: [],
-  }
+  },
+  {
+    id: 22,
+    title: "죽지 않은 연인에게",
+    artist: "데이먼스 이어 (Damons year)",
+    album: "CORPUS 0",
+    releaseDate: "2025-05-25",
+    genre: "인디음악, 록/메탈",
+    lyrics: "몸은 구겨져도 마음은 부풀어서...",
+    comments: [],
+  },
 
 ];
 
