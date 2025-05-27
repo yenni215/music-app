@@ -87,21 +87,6 @@ const Song = ({ song }) => {
           </button>
         )}
       </div>
-
-      <div style={{ marginTop: '16px' }}>
-        <strong>댓글:</strong>
-        {song.comments && song.comments.length > 0 ? (
-          <ul style={{ paddingLeft: '20px', marginTop: '8px' }}>
-            {song.comments.map((comment, index) => (
-              <li key={index} style={{ marginBottom: '6px' }}>
-                {comment}
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p style={{ color: '#888', marginTop: '8px' }}>댓글이 없습니다.</p>
-        )}
-      </div>
     </div>
   );
 };
