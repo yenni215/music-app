@@ -24,4 +24,5 @@ jobs:
       - name: Build the app
         run: npm run build
 
-      # 여기서부터 배포 스텝 추가 (예: Vercel 배포)
+      - name: Deploy to Vercel
+        run: npx vercel --token=$VERCEL_TOKEN --prod --confirm
